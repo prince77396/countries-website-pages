@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .navbar-light {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+}
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .navbar-dark {
+    background-color: #343a40 !important;
+    color: #fff !important;
+}
+.light-theme app-country-list,
+.dark-theme app-country-list {
+    background-color: inherit;
+    color: inherit;
+}
+.dashboard {
+    min-height: 100vh;
+}

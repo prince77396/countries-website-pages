@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="container search-dropdown">
+      <form class="form-inline search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="margin-right: 5px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="width: 300px;">Search for a country...</button>
+      </form>
+      <div>
+        <select id="region-select" (change)="onRegionChange()">
+          <option value="">Filter By Region:</option>
+          <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="row g-4">
+      <div *ngFor="let country of countries" class="col-12 col-sm-6 col-md-3" [routerLink]="['/country-details', country.name]">
+        <div class="card">
+          <img src="{{ country.flag }}" class="card-img-top" alt="{{ country.name }} Flag" style="width: 100%; height: 200px;">
+          <div class="card-body">
+            <h5 class="card-title mb-0">{{ country.name }}</h5>
+            <p class="card-text mb-0">Population: {{ country.population }}</p>
+            <p class="card-text mb-0">Region: {{ country.region }}</p>
+            <p class="card-text mb-0">Capital: {{ country.capital }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,18 @@
+<div class="dashboard" [ngClass]="{ 'light-theme': isLightTheme, 'dark-theme': !isLightTheme }" style="width: 100%;">
+    <nav class="navbar navbar-expand-lg" [ngClass]="{ 'navbar-light bg-light': isLightTheme, 'navbar-dark bg-dark': !isLightTheme }" style="border-bottom: 2px solid lightgray; width: 100%;">
+        <div class="container-fluid" style="margin-left: 20px; margin-right: 20px;">
+          <a class="navbar-brand" href="#">Where in the World?</a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <button class="nav-link btn" (click)="toggleTheme()">
+                  <span *ngIf="isLightTheme"><strong>Dark Mode</strong></span>
+                  <span *ngIf="!isLightTheme"><strong>Light Mode</strong></span>
+                </button>
+              </li>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <app-country-list [ngClass]="{ 'light-theme': isLightTheme, 'dark-theme': !isLightTheme }"></app-country-list>
+</div>

@@ -1,0 +1,20 @@
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  .navbar-light {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+  }
+  
+  .navbar-dark {
+    background-color: #000000 !important;
+    color: #fff !important;
+  }
+  
